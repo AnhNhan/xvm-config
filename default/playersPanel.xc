@@ -8,19 +8,22 @@
   "enemySpottedMarker": {
     // Opacity percentage of spotted markers in the panels. 0 - transparent (disabled) ... 100 - opaque.
     // Прозрачность в процентах маркеров засвета в ушах. 0 - полностью прозрачные (отключены), 100 - не прозрачные.
-    "alpha": 100,
+    "alpha": "{{a:spotted}}",
     // x position.
     // положение по горизонтали.
-    "x": -85,
+    "x": 6,
     // y position.
     // положение по вертикали.
-    "y": 8,
+    "y": 1,
+    // Horizontal alignment
+    // Выравнивание по горизонтали
+    "align": "center",
     // true - x position is binded to vehicle icon, false - binded to edge of the screen.
     // true - положение по горизонтали отсчитывается от иконки танка, false - от края экрана.
     "bindToIcon": true,
     // enemy spotted status marker format.
     // формат маркера статуса засвета.
-    "format": "{{spotted}}",
+    "format": "<font color='{{c:spotted}}'>{{spotted}}</font>",
     // shadow (see below).
     // настройки тени (см. ниже).
     "shadow": {}
@@ -191,10 +194,12 @@
       "width": 46,
       // Display format for the left panel (macros allowed, see macros.txt).
       // Формат отображения для левой панели (допускаются макроподстановки, см. macros.txt).
-      "formatLeft": "<font color='{{c:xwn8}}'>{{xwn8}}</font> <font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font alpha='#A0'>{{clan}}</font>",
+      "formatLeft": "<font color='{{c:r}}'>{{r}}</font> <font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font>",
+      "formatLeft": "<font color='{{c:r}}'>{{r}}</font> <font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font>",
       // Display format for the right panel (macros allowed, see macros.txt).
       // Формат отображения для правой панели (допускаются макроподстановки, см. macros.txt).
-      "formatRight": "<font alpha='#A0'>{{clan}}</font> <font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font color='{{c:xwn8}}'>{{xwn8}}</font>",
+      "formatRight": "<font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font color='{{c:r}}'>{{r}}</font>",
+      "formatRight": "<font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font color='{{c:r}}'>{{r}}</font>",
       // Display format for frags (macros allowed, see macros.txt).
       // Формат отображения фрагов (допускаются макроподстановки, см. macros.txt).
       "fragsFormatLeft": "{{frags}}",
@@ -225,10 +230,10 @@
       "width": 65,
       // Display format for the left panel (macros allowed, see macros.txt).
       // Формат отображения для левой панели (допускаются макроподстановки, см. macros.txt).
-      "formatLeft": "<font color='{{c:xwn8}}'>{{xwn8}}</font> <font alpha='{{alive?#FF|#80}}'>{{turret}} {{vehicle}}</font>",
+      "formatLeft": "<font color='{{c:r}}'>{{r}}</font> <font alpha='{{alive?#FF|#80}}'>{{vehicle}}</font>",
       // Display format for the right panel (macros allowed, see macros.txt).
       // Формат отображения для правой панели (допускаются макроподстановки, см. macros.txt).
-      "formatRight": "<font alpha='{{alive?#FF|#80}}'>{{vehicle}} {{turret}}</font> <font color='{{c:xwn8}}'>{{xwn8}}</font>",
+      "formatRight": "<font alpha='{{alive?#FF|#80}}'>{{vehicle}}</font> <font color='{{c:r}}'>{{r}}</font>",
       // Display format for frags (macros allowed, see macros.txt).
       // Формат отображения фрагов (допускаются макроподстановки, см. macros.txt).
       "fragsFormatLeft": "{{frags}}",
@@ -259,8 +264,8 @@
       "width": 100,
       // Display format for player nickname (macros allowed, see macros.txt).
       // Формат отображения имени игрока (допускаются макроподстановки, см. macros.txt).
-      "nickFormatLeft": "<font face='Lucida Console' size='12' color='{{c:xwn8}}' alpha='{{alive?#A0|#80}}'>{{xwn8}}</font> <img alpha='#77' src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> {{name%.15s~..}}",
-      "nickFormatRight": "{{name%.15s~..}} <img alpha='#77' src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> <font face='Lucida Console' size='12' color='{{c:xwn8}}' alpha='{{alive?#A0|#80}}'>{{xwn8}}</font>",
+      "nickFormatLeft": "<font face='mono' size='{{xvm-stat?13|0}}' color='{{c:r}}' alpha='{{alive?#FF|#80}}'>{{r}}</font> <img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> {{name%.15s~..}}",
+      "nickFormatRight": "{{name%.15s~..}} <img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> <font face='mono' size='{{xvm-stat?13|0}}' color='{{c:r}}' alpha='{{alive?#FF|#80}}'>{{r}}</font>",
       // Display format for vehicle name (macros allowed, see macros.txt).
       // Формат отображения названия танка (допускаются макроподстановки, см. macros.txt).
       "vehicleFormatLeft": "{{vehicle}}",
