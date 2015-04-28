@@ -21,7 +21,7 @@
     // Параметры шрифта.
     "font": {
       "name": "$FieldFont",           // Font name      / Название
-      "size": 18,                     // Font size      / Размер
+      "size": 16,                     // Font size      / Размер
       "align": "center",              // Text alignment (left, center, right) /   Выравнивание текста (left, center, right)
       "bold": false,                  // True - bold    / Жирный.
       "italic": false                 // True - italic  / Курсив.
@@ -43,7 +43,7 @@
     "maxRange": 40,
     // Text for normal damage (see description of macros in the macros.txt).
     // Текст при обычном уроне (см. описание макросов в macros.txt).
-    "damageMessage": "{{dmg}}",
+    "damageMessage": "<font color='{{c:dmg-kind}}'>{{dmg}}</font>",
     // Text for ammo rack explosion (see description of macros in the macros.txt).
     // Текст при взрыве боеукладки (см. описание макросов в macros.txt).
     "blowupMessage": "{{l10n:blownUp}}\n{{dmg}}"

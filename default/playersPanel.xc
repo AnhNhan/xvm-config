@@ -25,6 +25,14 @@
     // настройки тени (см. ниже).
     "shadow": {}
   },
+  "extraVehicleInfo_Anh": {
+    "alpha": 70,
+    "x": -95,
+    "y": 8,
+    "bindToIcon": true,
+    "format": "",
+    "shadow": {}
+  },
   // Parameters of the Players Panels ("ears").
   // Параметры панелей игроков ("ушей").
   "playersPanel": {
@@ -161,13 +169,16 @@
       // Дополнительные поля. Каждое поле имеет размер 350x25. Поля располагаются друг над другом.
       // Set of formats for left panel (extended format supported, see above)
       // Набор форматов для левой панели (поддерживается расширенный формат, см. выше)
-      "extraFieldsLeft": [],
+      "extraFieldsLeft": [
+        ${"extraVehicleInfo_Anh"}
+      ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
       "extraFieldsRight": [
         // enemy spotted status marker (see above).
         // маркер статуса засвета (см. выше).
-        ${"enemySpottedMarker"}
+        ${"enemySpottedMarker"},
+        ${"extraVehicleInfo_Anh"}
       ]
     },
     // Options for the "medium" panels - the first of the medium panels.
@@ -180,10 +191,10 @@
       "width": 46,
       // Display format for the left panel (macros allowed, see macros.txt).
       // Формат отображения для левой панели (допускаются макроподстановки, см. macros.txt).
-      "formatLeft": "<font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font alpha='#A0'>{{clan}}</font>",
+      "formatLeft": "<font color='{{c:xwn8}}'>{{xwn8}}</font> <font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font alpha='#A0'>{{clan}}</font>",
       // Display format for the right panel (macros allowed, see macros.txt).
       // Формат отображения для правой панели (допускаются макроподстановки, см. macros.txt).
-      "formatRight": "<font alpha='#A0'>{{clan}}</font> <font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font>",
+      "formatRight": "<font alpha='#A0'>{{clan}}</font> <font alpha='{{alive?#FF|#80}}'>{{name%.12s~..}}</font> <font color='{{c:xwn8}}'>{{xwn8}}</font>",
       // Display format for frags (macros allowed, see macros.txt).
       // Формат отображения фрагов (допускаются макроподстановки, см. macros.txt).
       "fragsFormatLeft": "{{frags}}",
@@ -192,13 +203,16 @@
       // Дополнительные поля. Каждое поле имеет размер 350x25. Поля располагаются друг над другом.
       // Set of formats for left panel (extended format supported, see above)
       // Набор форматов для левой панели (поддерживается расширенный формат, см. выше)
-      "extraFieldsLeft": [],
+      "extraFieldsLeft": [
+        ${"extraVehicleInfo_Anh"}
+      ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
       "extraFieldsRight": [
         // enemy spotted status marker (see above).
         // маркер статуса засвета (см. выше).
-        ${"enemySpottedMarker"}
+        ${"enemySpottedMarker"},
+        ${"extraVehicleInfo_Anh"}
       ]
     },
     // Options for the "medium2" panels - the second of the medium panels.
@@ -211,10 +225,10 @@
       "width": 65,
       // Display format for the left panel (macros allowed, see macros.txt).
       // Формат отображения для левой панели (допускаются макроподстановки, см. macros.txt).
-      "formatLeft": "<font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{vehicle}}</font>",
+      "formatLeft": "<font color='{{c:xwn8}}'>{{xwn8}}</font> <font alpha='{{alive?#FF|#80}}'>{{turret}} {{vehicle}}</font>",
       // Display format for the right panel (macros allowed, see macros.txt).
       // Формат отображения для правой панели (допускаются макроподстановки, см. macros.txt).
-      "formatRight": "<font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{vehicle}}</font>",
+      "formatRight": "<font alpha='{{alive?#FF|#80}}'>{{vehicle}} {{turret}}</font> <font color='{{c:xwn8}}'>{{xwn8}}</font>",
       // Display format for frags (macros allowed, see macros.txt).
       // Формат отображения фрагов (допускаются макроподстановки, см. macros.txt).
       "fragsFormatLeft": "{{frags}}",
@@ -223,13 +237,16 @@
       // Дополнительные поля. Каждое поле имеет размер 350x25. Поля располагаются друг над другом.
       // Set of formats for left panel (extended format supported, see above)
       // Набор форматов для левой панели (поддерживается расширенный формат, см. выше)
-      "extraFieldsLeft": [],
+      "extraFieldsLeft": [
+        ${"extraVehicleInfo_Anh"}
+      ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
       "extraFieldsRight": [
         // enemy spotted status marker (see above).
         // маркер статуса засвета (см. выше).
-        ${"enemySpottedMarker"}
+        ${"enemySpottedMarker"},
+        ${"extraVehicleInfo_Anh"}
       ]
     },
     // Options for the "large" panels - the widest panels.
@@ -242,12 +259,12 @@
       "width": 100,
       // Display format for player nickname (macros allowed, see macros.txt).
       // Формат отображения имени игрока (допускаются макроподстановки, см. macros.txt).
-      "nickFormatLeft": "<font face='Lucida Console' size='12' color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{xwn8}}</font> <img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> {{name%.15s~..}} <font alpha='#A0'>{{clan}}</font>",
-      "nickFormatRight": "<font alpha='#A0'>{{clan}}</font> {{name%.15s~..}} <img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> <font face='Lucida Console' size='12' color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{xwn8}}</font>",
+      "nickFormatLeft": "<font face='Lucida Console' size='12' color='{{c:xwn8}}' alpha='{{alive?#A0|#80}}'>{{xwn8}}</font> <img alpha='#77' src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> {{name%.15s~..}}",
+      "nickFormatRight": "{{name%.15s~..}} <img alpha='#77' src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'> <font face='Lucida Console' size='12' color='{{c:xwn8}}' alpha='{{alive?#A0|#80}}'>{{xwn8}}</font>",
       // Display format for vehicle name (macros allowed, see macros.txt).
       // Формат отображения названия танка (допускаются макроподстановки, см. macros.txt).
       "vehicleFormatLeft": "{{vehicle}}",
-      "vehicleFormatRight": "{{vehicle}}",
+      "vehicleFormatRight": "{{turret}} {{vehicle}}",
       // Display format for frags (macros allowed, see macros.txt).
       // Формат отображения фрагов (допускаются макроподстановки, см. macros.txt).
       "fragsFormatLeft": "{{frags}}",
@@ -256,13 +273,16 @@
       // Дополнительные поля. Каждое поле имеет размер 350x25. Поля располагаются друг над другом.
       // Set of formats for left panel (extended format supported, see above)
       // Набор форматов для левой панели (поддерживается расширенный формат, см. выше)
-      "extraFieldsLeft": [],
+      "extraFieldsLeft": [
+        ${"extraVehicleInfo_Anh"}
+      ],
       // Set of formats for right panel (extended format supported, see above)
       // Набор форматов для правой панели (поддерживается расширенный формат, см. выше)
       "extraFieldsRight": [
         // enemy spotted status marker (see above).
         // маркер статуса засвета (см. выше).
-        ${"enemySpottedMarker"}
+        ${"enemySpottedMarker"},
+        ${"extraVehicleInfo_Anh"}
       ]
     }
   }

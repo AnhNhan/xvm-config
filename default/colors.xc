@@ -6,10 +6,10 @@
   // Color values for substitutions.
   // Значения цветов для подстановок.
   "def": {
-    "al": "0x27ae60", // ally       / союзник #nephritis
+    "al": "0x2ecc71", // ally       / союзник #emerland
     "sq": "0xFFB964", // squadman   / взводный
     "tk": "0x00EAFF", // teamKiller / тимкиллер
-    "en": "0xc0392b", // enemy      / противник #pomegranate
+    "en": "0xe74c3c", // enemy      / противник #alizarin
     "pl": "0x336699", // player     / игрок #link-active
     // Dynamic color by various statistical parameters.
     // Динамический цвет по различным статистическим показателям.
