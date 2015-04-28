@@ -6,20 +6,20 @@
   // Color values for substitutions.
   // Значения цветов для подстановок.
   "def": {
-    "al": "0x96FF00", // ally       / союзник
+    "al": "0x27ae60", // ally       / союзник #nephritis
     "sq": "0xFFB964", // squadman   / взводный
     "tk": "0x00EAFF", // teamKiller / тимкиллер
-    "en": "0xF50800", // enemy      / противник
-    "pl": "0xFFDD33", // player     / игрок
+    "en": "0xc0392b", // enemy      / противник #pomegranate
+    "pl": "0x336699", // player     / игрок #link-active
     // Dynamic color by various statistical parameters.
     // Динамический цвет по различным статистическим показателям.
     "colorRating": {
-      "very_bad":     "0xFE0E00",   // very bad   / очень плохо
-      "bad":          "0xFE7903",   // bad        / плохо
-      "normal":       "0xF8F400",   // normal     / средне
-      "good":         "0x60FF00",   // good       / хорошо
-      "very_good":    "0x02C9B3",   // very good  / очень хорошо
-      "unique":       "0xD042F3"    // unique     / уникально
+      "very_bad":     "0xe74c3c",   // very bad   / очень плохо       0xFE0E00 #alizarin
+      "bad":          "0xe67e22",   // bad        / плохо             0xFE7903 #carrot
+      "normal":       "0xf1c40f",   // normal     / средне            0xF8F400 #sunflower
+      "good":         "0x2ecc71",   // good       / хорошо            0x60FF00 #emerland
+      "very_good":    "0x3498db",   // very good  / очень хорошо      0x02C9B3 #peterriver
+      "unique":       "0x9b59b6"    // unique     / уникально         0xD042F3 #amethyst
     },
     // Dynamic color by remaining health points.
     // Динамический цвет по оставшемуся запасу прочности.

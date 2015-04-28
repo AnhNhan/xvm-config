@@ -21,10 +21,10 @@
     "autoPutPreviousCrewInTanks": false,
     // true - Show shooting range of artillery and machine guns in carousel and techtree tooltips
     // true - Показывать дальность стрельбы артиллерии и пулеметов в всплывающих подсказках карусели и дерева исследований
-    "showShootRangeTooltip": false,
+    "showShootRangeTooltip": true,
     // true - Enable widgets
     // true - включить виджеты
-    "widgetsEnabled": false,
+    "widgetsEnabled": true,
     // Ping servers
     // Пинг серверов
     "pingServers": {

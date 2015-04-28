@@ -43,7 +43,7 @@
     "maxRange": 40,
     // Text for normal damage (see description of macros in the macros.txt).
     // Текст при обычном уроне (см. описание макросов в macros.txt).
-    "damageMessage": "{{dmg}}",
+    "damageMessage": "<font color='{{c:dmg-kind}}'>{{dmg}}</font> (<font color'{{c:vtype}}'>{{vehicle}}</font>)",
     // Text for ammo rack explosion (see description of macros in the macros.txt).
     // Текст при взрыве боеукладки (см. описание макросов в macros.txt).
     "blowupMessage": "{{l10n:blownUp}}\n{{dmg}}"
@@ -129,7 +129,7 @@
     // Контурная иконка танка.
     "contourIcon": {
       // false - disable / не отображать.
-      "visible": false,
+      "visible": true,
       // Axis field coordinates.
       // Положение поля по осям.
       "x": 6,
@@ -159,7 +159,7 @@
     // Vehicle tier.
     // Уровень танка.
     "levelIcon": {
-      "visible": false,  // false - disable        / не отображать.
+      "visible": true,  // false - disable        / не отображать.
       "x": 0,            // Position on the X axis / Положение по оси X.
       "y": -21,          // Position on the Y axis / Положение по оси Y.
       "alpha": 100       // Opacity                / Прозрачность.

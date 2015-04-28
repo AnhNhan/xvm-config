@@ -9,22 +9,22 @@
     "enabled": true,
     // Scale of carousel cells.
     // Масштаб ячеек карусели.
-    "zoom": 1,
+    "zoom": 0.85,
     // Number of rows at carousel.
     // Количество рядов карусели.
-    "rows": 1,
+    "rows": 2,
     // Spacing between carousel cells.
     // Отступ между ячейками карусели.
     "padding": {
-        "horizontal": 10,   // по горизонтали
-        "vertical": 2       // по вертикали
+        "horizontal": 8,    // по горизонтали
+        "vertical": 4       // по вертикали
     },
     // true - show filters even if all tanks fit on the screen.
     // true - показывать фильтры даже если все танки помещаются на экране.
     "alwaysShowFilters": false,
     // true - hide cell "Buy tank".
     // true - скрыть ячейку "Купить танк".
-    "hideBuyTank": false,
+    "hideBuyTank": true,
     // true - hide cell "Buy slot".
     // true - скрыть ячейку "Купить слот".
     "hideBuySlot": false,

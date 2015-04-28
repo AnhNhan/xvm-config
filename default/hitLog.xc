@@ -28,7 +28,7 @@
         "header": "<font color='#FFFFFF'>{{l10n:hpLeftTitle}}</font>",
         // Row in HP list (macros allowed, see macros.txt).
         // Строка в списке попаданий (допускаются макроподстановки, см. macros.txt)
-        "format": "<textformat leading='-4' tabstops='[50,90,190]'><font color='{{c:hp-ratio}}'>     {{hp}}</font><tab><font color='#FFFFFF'>/ </font>{{hp-max}}<tab><font color='#FFFFFF'>|</font><font color='{{c:vtype}}'>{{vehicle}}</font><tab><font color='#FFFFFF'>|{{nick}}</font></textformat>"
+        "format": "<textformat leading='-4' tabstops='[50,90,190]'><font color='{{c:hp-ratio}}'>     {{hp}}</font><tab><font color='#FFFFFF'>/ </font>{{hp-max}}<tab><font color='#FFFFFF'>|</font>{{rlevel}} {{vehicle-class}} <font color='{{c:vtype}}'>{{vehicle}}</font><tab><font color='#FFFFFF'>|{{nick}}</font></textformat>"
     },
 
     // X position (negative values - bind to right side of screen).
@@ -45,7 +45,7 @@
     "h": 1000,
     // Number of lines with hits. Old lines will be pushed out.
     // Количество строк с попаданиями. Устаревшие данные выталкиваются.
-    "lines": 0,
+    "lines": 5,
     // Log direction: up - lines will be added from up to down, down - from down to up.
     // Направление лога: up - строки добавляются сверху, down - снизу.
     "direction": "down",

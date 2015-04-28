@@ -12,7 +12,7 @@
     "showTotalExperience": true,
     // true - Display crew experience in first page
     // true - Отображать опыт экипажа на первой странице
-    "showCrewExperience": false,
+    "showCrewExperience": true,
     // true - Display net income of credits in first page
     // true - Отображать чистый доход на первой странице
     "showNetIncome": true,
@@ -24,6 +24,6 @@
     "showTotals": true,
     // true - Enable display of battle tier.
     // true - включить отображение уровня боя.
-    "showBattleTier": false
+    "showBattleTier": true
   }
 }
