@@ -25,9 +25,15 @@
     // true - Allow to consider the exchange of experience with gold in tech tree
     // true - Разрешить учитывать обмен опыта за золото в дереве исследований
     "allowExchangeXPInTechTree": true,
-    // true - enable crew auto return function
-    // true - включить функцию автовозврата экипажа
+    // true - Enable crew auto return function
+    // true - Включить функцию автовозврата экипажа
     "enableCrewAutoReturn": true,
+    // true - Return crew check box is selected by default
+    // true - Включить галочку возврата экипажа по умолчанию
+    "crewReturnByDefault": false,
+    // true - Enable removable equipment auto return (Camouflage net, Stereoscope, Toolbox)
+    // true - Включить автовозврат съемного оборудования (Маскировочная сеть, Стереотруба, Ящик с инструментами)
+    "enableEquipAutoReturn": false,
     // true - Enable widgets
     // true - включить виджеты
     "widgetsEnabled": false,
@@ -105,6 +111,19 @@
         "blur": 4,
         "strength": 2
       }
+    },
+    // Show/hide server info or change its parameters
+    // Показать/спрятать информацию о сервере, или изменить ее параметры
+    "serverInfo": {
+      // Show server info in hangar.
+      // Показывать информацию о сервере в ангаре.
+      "enabled": true,
+      // Transparency in percents [0..100].
+      // Прозрачность в процентах [0..100].
+      "alpha": 100,
+      // Rotation in degrees [0..360].
+      // Угол поворота в градусах [0..360].
+      "rotation": 0
     },
     // Parameters for tank carousel
     // Параметры карусели танков

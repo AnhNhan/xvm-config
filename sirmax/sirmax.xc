@@ -1,10 +1,10 @@
 {
   "configVersion": "5.1.0",
-  //"autoReloadConfig": true,
+  "autoReloadConfig": true,
   //"language": "pl",
   "def": {
     "formatNick": "{{name%.20s~..}}<font alpha='#A0'>{{clan}}</font>",
-    "formatVehicle": "<font face='Consolas' size='11'><img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'><img src='xvm://res/icons/lang/{{language|empty}}.png' width='16' height='11'> <font color='{{c:avglvl|#666666}}'>{{avglvl%d|-}}</font> <font color='{{t-battles>9?{{c:xte|#666666}}|#666666}}'>{{t-battles>9?{{xte|--}}|--}}</font>|<font color='{{c:xwgr|#666666}}'>{{xwgr|--}}</font>|<font color='{{c:xeff|#666666}}'>{{xeff|--}}</font>|<font color='{{c:xwn8|#666666}}'>{{xwn8|--}}</font> <font color='{{c:kb|#666666}}'>{{kb%2d~k|--k}}</font></font>",
+    "formatVehicle": "<font face='Consolas' size='11'><img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'><img src='xvm://res/icons/flags/{{flag|default}}.png' width='16' height='11'> <font color='{{c:avglvl|#666666}}'>{{avglvl%d|-}}</font> <font color='{{t-battles>9?{{c:xte|#666666}}|#666666}}'>{{t-battles>9?{{xte|--}}|--}}</font>|<font color='{{c:xwgr|#666666}}'>{{xwgr|--}}</font>|<font color='{{c:xeff|#666666}}'>{{xeff|--}}</font>|<font color='{{c:xwn8|#666666}}'>{{xwn8|--}}</font> <font color='{{c:kb|#666666}}'>{{kb%2d~k|--k}}</font></font>",
     //"formatVehicle": "{{vehicle}}",
 
     "pingServers": {
@@ -23,9 +23,9 @@
     "__stub__": {}
   },
   "elements": [
-    ${"sirmax-snippet-test.xc":"."},
-    //${"sirmax-snippet-pp.xc":"."},  // players panels
-    ${"sirmax-snippet-bt.xc":"."} // battle timer
+    //${"sirmax-snippet-pp.xc":"."}, // players panels
+    //${"sirmax-snippet-bt.xc":"."}, // battle timer
+    ${"sirmax-snippet-test.xc":"."}
   ],
   "login": {
     "skipIntro": true,
@@ -42,6 +42,8 @@
     "masteryMarkInTechTree": true,
     "allowExchangeXPInTechTree": false,
     //"enableCrewAutoReturn": false,
+    //"crewReturnByDefault": true,
+    "enableEquipAutoReturn": true,
     "showShootRangeTooltip": true,
     "widgetsEnabled": true,
     "pingServers": {
@@ -53,6 +55,10 @@
       //"x": 100,
       //"y": 5,
       //"format": "<font face='$FieldFont'><font size='26'> {{H}}:{{m%02d}} {{AM?a.m.|p.m.}}</font></font>"
+    },
+    "serverInfo": {
+      //"enabled": false,
+      "alpha": 75
     }
   },
   "userInfo": {
@@ -78,11 +84,11 @@
     "allowHpInPanelsAndMinimap": true,
     "allowMarksOnGunInPanelsAndMinimap": true,
     "clanIconsFolder": "clanicons",
-    "sixthSenseIcon": "{{battletype=regular?cfg://sirmax/img/SixthSense.png|}}",
+    "sixthSenseIcon": "cfg://sirmax/img/SixthSense.png",
     "elements": ${"elements"}
   },
   "fragCorrelation": {
-    "hideTeamTextFields": true
+    //"showAliveNotFrags": true
   },
   "captureBar": {
     //"enabled": false,
@@ -129,8 +135,8 @@
     "direction": "down",
     "insertOrder": "end",
     "groupHitsByPlayer": true,
-    "deadMarker": "<img src='xvm://res/icons/dead.png' width='12' height='12'>",
-    "blowupMarker": "<img src='xvm://res/icons/blowedup.png' width='12' height='12'>",
+    "deadMarker": "<font face='xvm'>\u0077</font>",
+    "blowupMarker": "<font face='xvm'>\u0078</font>",
 //  TEST
 //    "formatHistory": "<textformat tabstops='[20,50,90,150]'><font size='12'>#19</font>:<tab>9999<tab>| 2222<tab>| ramming<tab>| {{n}} {{n-player}} {{nick}}</textformat>",
     "defaultHeader": "<textformat leading='-2'><font color='#CCCCCC'>Total:</font> <font size='13'>#0</font></textformat>",
