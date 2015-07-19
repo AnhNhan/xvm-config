@@ -8,11 +8,19 @@
     //"formatVehicle": "{{vehicle}}",
 
     "pingServers": {
-      //"y": 70,
       "enabled": true,
+      //"y": 70,
+      "showTitle": false,
       "updateInterval": 5000
     },
-
+    "onlineServers": {
+      "enabled": true,
+      //"x": -3,
+      //"y": 51,
+      //"hAlign": "center",
+      //"topmost": true,
+      "showTitle": false
+    },
     "__stub__": null
   },
   "hotkeys": {
@@ -41,6 +49,7 @@
     "hidePricesInTechTree": true,
     "masteryMarkInTechTree": true,
     "allowExchangeXPInTechTree": false,
+    "blockVehicleIfNoAmmo": true,
     //"enableCrewAutoReturn": false,
     //"crewReturnByDefault": true,
     "enableEquipAutoReturn": true,
@@ -135,8 +144,8 @@
     "direction": "down",
     "insertOrder": "end",
     "groupHitsByPlayer": true,
-    "deadMarker": "<font face='xvm'>\u0077</font>",
-    "blowupMarker": "<font face='xvm'>\u0078</font>",
+    "deadMarker": "<font face='xvm'>\u002B</font>",
+    "blowupMarker": "<font face='xvm'>\u007C</font>",
 //  TEST
 //    "formatHistory": "<textformat tabstops='[20,50,90,150]'><font size='12'>#19</font>:<tab>9999<tab>| 2222<tab>| ramming<tab>| {{n}} {{n-player}} {{nick}}</textformat>",
     "defaultHeader": "<textformat leading='-2'><font color='#CCCCCC'>Total:</font> <font size='13'>#0</font></textformat>",
@@ -161,6 +170,8 @@
   "iconset": {
     "battleLoadingAlly": "../../../../res/contour/Master_XH",
     "battleLoadingEnemy": "../../../../res/contour/Master_XH",
+    //"battleLoadingAlly": "../../../../res/contour/block",
+    //"battleLoadingEnemy": "../../../../res/contour/block",
     "statisticFormAlly": "../../../../res/contour/Master_XH",
     "statisticFormEnemy": "../../../../res/contour/Master_XH",
     "playersPanelAlly":  "../../../../res/contour/Master_XH",
