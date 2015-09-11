@@ -4,7 +4,7 @@
   //"language": "pl",
   "def": {
     "formatNick": "{{name%.20s~..}}<font alpha='#A0'>{{clan}}</font>",
-    "formatVehicle": "<font face='Consolas' size='11'><img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'><img src='xvm://res/icons/flags/{{flag|default}}.png' width='16' height='11'> <font color='{{c:avglvl|#666666}}'>{{avglvl%d|-}}</font> <font color='{{t-battles>9?{{c:xte|#666666}}|#666666}}'>{{t-battles>9?{{xte|--}}|--}}</font>|<font color='{{c:xwgr|#666666}}'>{{xwgr|--}}</font>|<font color='{{c:xeff|#666666}}'>{{xeff|--}}</font>|<font color='{{c:xwn8|#666666}}'>{{xwn8|--}}</font> <font color='{{c:kb|#666666}}'>{{kb%2d~k|--k}}</font></font>",
+    "formatVehicle": "<font face='Consolas' size='11'><img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'><img src='xvm://res/icons/flags/{{flag|default}}.png' width='16' height='11'><font color='{{c:avglvl|#666666}}'>{{avglvl%d|-}}</font> <font color='{{t-battles>9?{{c:xte|#666666}}|#666666}}'>{{t-battles>9?{{xte|--}}|--}}</font>|<font color='{{c:xwgr|#666666}}'>{{xwgr|--}}</font>|<font color='{{c:xeff|#666666}}'>{{xeff|--}}</font>|<font color='{{c:xwn8|#666666}}'>{{xwn8|--}}</font> <font color='{{c:kb|#666666}}'>{{kb%2d~k|--k}}</font></font>",
     //"formatVehicle": "{{vehicle}}",
 
     "pingServers": {
@@ -36,7 +36,7 @@
     ${"sirmax-snippet-test.xc":"."}
   ],
   "login": {
-    "skipIntro": true,
+    //"skipIntro": false,
     "saveLastServer": true,
     "autologin": true,
     "confirmOldReplays": true,
@@ -107,7 +107,17 @@
   },
   "battleLoading": {
     "showBattleTier": true,
-    "removeSquadIcon": false,
+    //"removeSquadIcon": true,
+    "removeVehicleLevel": true,
+    "removeVehicleTypeIcon": true,
+    //"squadIconOffsetXLeft": -32,
+    //"squadIconOffsetXRight": -32,
+    //"nameFieldOffsetXLeft": -10,
+    //"nameFieldOffsetXRight": -10,
+    //"vehicleFieldOffsetXLeft": 8,
+    //"vehicleFieldOffsetXRight": 8,
+    //"vehicleIconOffsetXLeft": 4,
+    //"vehicleIconOffsetXRight": 4,
     "clanIcon": { "show": true, "x": -345, "xr": -345, "y": 4, "h": 16, "w": 16, "alpha": 90 },
     //"clanIcon": { "show": true, "x": 4, "xr": 4, "y": 6, "h": 16, "w": 16, "alpha": 90 },
     "formatLeftNick":  ${"def.formatNick"},
@@ -117,6 +127,17 @@
   },
   "statisticForm": {
     "showBattleTier": true,
+    //"removeSquadIcon": true,
+    "removeVehicleLevel": true,
+    "removeVehicleTypeIcon": true,
+    //"squadIconOffsetXLeft": -32,
+    //"squadIconOffsetXRight": -32,
+    //"nameFieldOffsetXLeft": -10,
+    //"nameFieldOffsetXRight": -10,
+    //"vehicleFieldOffsetXLeft": 8,
+    //"vehicleFieldOffsetXRight": 8,
+    //"vehicleIconOffsetXLeft": 4,
+    //"vehicleIconOffsetXRight": 4,
     "clanIcon": { "show": true, "x": -345, "xr": -345, "y": 4, "h": 16, "w": 16, "alpha": 90 },
     //"clanIcon": { "show": true, "x": 4, "xr": 4, "y": 6, "h": 16, "w": 16, "alpha": 90 },
     "formatLeftNick":  ${"def.formatNick"},
@@ -174,6 +195,8 @@
     //"battleLoadingEnemy": "../../../../res/contour/block",
     "statisticFormAlly": "../../../../res/contour/Master_XH",
     "statisticFormEnemy": "../../../../res/contour/Master_XH",
+    //"statisticFormAlly": "../../../../res/contour/block",
+    //"statisticFormEnemy": "../../../../res/contour/block",
     "playersPanelAlly":  "../../../../res/contour/Master_XH",
     "playersPanelEnemy":  "../../../../res/contour/Master_XH",
     "vehicleMarker": "../../../../res/contour/Aslain"
