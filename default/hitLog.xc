@@ -1,6 +1,9 @@
 ﻿/**
  * Hit log (my hits calculator).
  * Лог попаданий (счетчик своих попаданий).
+ ************************************
+ *   Xft hitlog v0.18 (integrated)  *
+ ************************************
  */
 {
   "hitLog": {
@@ -16,36 +19,36 @@
 
     // Показывать оставшееся HP врагов по нажатию Alt
     // Уничтоженные враги и вражеское HP обновляется только, когда маркеры становятся видимыми.
-    // Маркеры видимы только в квадрате со стороной в 1000м.
+    // Маркеры видимы только в квадрате со стор0оной в 1000м.
     // Квадрат в 1000 метров это ограничение игрового движка. Максимальная дистанция отрисовки маркеров.
     // Данные по конкретному врагу не могут быть обновлены пока не видно его маркер или обломки.
     "hpLeft": {
         // false - Disable.
         // false - отключить.
         "enabled": true,
-        // Header - Only localization macros are allowed, see macros.txt.
-        // Заголовок - допускаются только макросы перевода, см. macros.txt.
-        "header": "<font color='#FFFFFF'>{{l10n:hpLeftTitle}}</font>",
-        // Row in HP list (macros allowed, see macros.txt).
-        // Строка в списке попаданий (допускаются макроподстановки, см. macros.txt)
-        "format": "<textformat leading='-4' tabstops='[50,90,190]'><font color='{{c:hp-ratio}}'>     {{hp}}</font><tab><font color='#FFFFFF'>/ </font>{{hp-max}}<tab><font color='#FFFFFF'>|</font><font color='{{c:vtype}}'>{{vehicle}}</font><tab><font color='#FFFFFF'>|{{nick}}</font></textformat>"
+        // Header - Only localization macros are allowed, see readme-en.txt.
+        // Заголовок - допускаются только макросы перевода, см. readme-ru.txt.
+        "header": "<textformat align='right' leading='1'><img src='img://gui/maps/icons/library/BattleResultIcon-1.png' width='16' height='16' align='baseline' vspace='-3'><font face='$UniversCondC' size='16' color='#99ff99'><b>{{l10n:hpLeftTitle}}</b></font></textformat>",
+        // Row in HP list (macros allowed, see readme-en.txt).
+        // Строка в списке попаданий (допускаются макроподстановки, см. readme-ru.txt)
+        "format": "<textformat align='right' leading='-4' tabstops='[110,150,205]'><font face='XVMSymbol' size='17' color='#ffffff'>{{vtype}}</font><font face='$UniversCondC' size='15' color='#ffffff'>  {{vehicle}}</font><tab><font face='$UniversCondC' size='15' color='#ffcc66'><b>{{hp}}</b></font><tab>(<font face='$UniversCondC' size='15' color='#cccccc'>{{hp-ratio}}&#37;</font>)<tab><font face='Webdings' size='15' color='#404040'> | </font></textformat>"
     },
 
     // X position (negative values - bind to right side of screen).
     // Позиция X (отрицательные значения - привязать к правой стороне экрана).
-    "x": 270,
+    "x": 235,
     // Y position (negative values - bind to bottom side of screen).
     // Позиция Y (отрицательные значения - привязать к нижней стороне экрана).
-    "y": 40,
+    "y": -254,
     // Width.
     // Ширина.
-    "w": 500,
+    "w": 600,
     // Height.
     // Высота.
-    "h": 1000,
+    "h": 400,
     // Number of lines with hits. Old lines will be pushed out.
     // Количество строк с попаданиями. Устаревшие данные выталкиваются.
-    "lines": 5,
+    "lines": 15,
     // Log direction: up - lines will be added from up to down, down - from down to up.
     // Направление лога: up - строки добавляются сверху, down - снизу.
     "direction": "down",
@@ -54,20 +57,20 @@
     "groupHitsByPlayer": true,
     // Insert order: begin - insert new values to begin, end - add to end.
     // Сортировка попаданий: begin - новые значения добавляются сверху, end - снизу.
-    "insertOrder": "end",
+    "insertOrder": "begin",
     // Substitution for {{dead}} macro when tank is dead.
     // Подстановка для макроса {{dead}}, когда танк умирает.
-    "deadMarker": "&#x77;",
-    "blowupMarker": "&#x78;",
-    // Default header format (before first hit). Only localization macros are allowed, see macros.txt.
-    // Формат заголовка по умолчанию (до первого попадания). Допускаются только макросы перевода, см. macros.txt.
-    "defaultHeader":  "<font color='#FFFFFF'>{{l10n:Hits}}:</font> <font size='13'>#0</font>",
-    // Hits header format, including last hit (macros allowed, see macros.txt).
-    // Формат заголовка (допускаются макроподстановки, см. macros.txt).
-    "formatHeader":  "<font color='#FFFFFF'>{{l10n:Hits}}:</font> <font size='13'>#{{n}}</font> <font color='#FFFFFF'>{{l10n:Total}}: </font><b>{{dmg-total}}</b>  <font color='#FFFFFF'>{{l10n:Last}}:</font> <font color='{{c:dmg-kind}}'><b>{{dmg}}</b></font> <font face='xvm' size='21'>{{dead=&#x77;?&#x29;|{{dead=&#x78;?&#x28;}}}}</font>",
-    // List of hits format (macros allowed, see macros.txt).
-    // Формат лога попаданий (допускаются макроподстановки, см. macros.txt)
-    "formatHistory": "<textformat leading='-4' tabstops='[20,50,90,190]'><font size='12'>\u00D7{{n-player}}:</font><tab><font color='{{c:dmg-kind}}'>{{dmg}}</font><tab>| {{dmg-player}}<tab>|<font color='{{c:vtype}}'>{{vehicle}}</font> <font face='xvm' size='19' color='#FF0000'>{{dead}}</font><tab><font color='#FFFFFF'>|{{name%.15s~..}}</font></textformat>",
+    "deadMarker": "<b><font face='XVMSymbol' color='#00FF00'><b>&#66;</b></font>",
+    "blowupMarker": "<font face='XVMSymbol' color='#FF0000'><b>&#44;</b></font>",
+    // Default header format (before first hit). Only localization macros are allowed, see readme-en.txt.
+    // Формат заголовка по умолчанию (до первого попадания). Допускаются только макросы перевода, см. readme-ru.txt.
+    "defaultHeader": "<textformat align='right' leading='3'><img src='img://gui/maps/icons/library/BattleResultIcon-1.png' width='16' height='16' align='baseline' vspace='-3'><font face='$UniversCondC' size='16' color='#99ff99'><b>Damage done:</b></font></textformat>",
+    // Hits header format, including last hit (macros allowed, see readme-en.txt).
+    // Формат заголовка (допускаются макроподстановки, см. readme-ru.txt).
+    "formatHeader": "<textformat align='right' leading='1'><img src='img://gui/maps/icons/library/BattleResultIcon-1.png' width='16' height='16' align='baseline' vspace='-3'><font face='$UniversCondC' size='16' color='#99ff99'><b>Damage done:</b></font> <b><font face='$UniversCondC' size='16' color='#ffffff'><b>{{dmg-total}}</b></font><font face='$UniversCondC' color='#cccccc' size='13'> hp</font> <font face='$UniversCondC' size='15' color='#cccccc'> (hits: <b>{{n}}</b>)</font></textformat>",
+    // List of hits format (macros allowed, see readme-en.txt).
+    // Формат лога попаданий (допускаются макроподстановки, см. readme-ru.txt)
+    "formatHistory": "<textformat align='right' leading='-4' tabstops='[50,105,205]'><font face='$UniversCondC' size='14' color='#999999'>(</font><font face='$UniversCondC' size='14' color='#ffffff'>{{n-player}}</font><font face='$UniversCondC' size='14' color='#cccccc'>) </font><font face='$UniversCondC' size='15' color='#ffffff'><b>{{dmg-player}}</b></font><tab><font face='$UniversCondC' size='14' color='#999999'><b>{{dmg-kind}}</b></font><tab><font face='XVMSymbol' size='17' color='#ffffff'>{{vtype}}  </font><font face='$UniversCondC' size='14' color='#ffffff'>{{vehicle}} </font>{{dead}}<tab><font face='Webdings' size='15' color='#404040'> | </font></b></textformat>", 
     // Shadow options.
     // Параметры тени.
     "shadow": {
@@ -78,7 +81,7 @@
       "color": "0x000000",
       // Offset angle.
       // Угол смещения.
-      "angle": 45,
+      "angle": 90,
       // Offset distance.
       // Дистанция смещения.
       "distance": 0,
@@ -86,7 +89,7 @@
       "size": 5,
       // Intensity.
       // Интенсивность.
-      "strength": 150
+      "strength": 250
     }
   }
 }
