@@ -5,54 +5,93 @@
 {
   "texts": {
     // Text for {{vtype}} macro.
+    // Текст для макроса {{vtype}}.
     "vtype": {
-      "LT":  "\u003A",
-      "MT":  "\u003B",
-      "HT":  "\u003F",
-      "SPG": "\u002D",
-      "TD":  "\u002E"
+      // Text for light tanks / Текст для легких танков.
+      "LT":  "{{l10n:LT}}",
+      // Text for medium tanks / Текст для средних танков.
+      "MT":  "{{l10n:MT}}",
+      // Text for heavy tanks / Текст для тяжелых танков.
+      "HT":  "{{l10n:HT}}",
+      // Text for arty / Текст для арты.
+      "SPG": "{{l10n:SPG}}",
+      // Text for tank destroyers / Текст для ПТ.
+      "TD":  "{{l10n:TD}}"
     },
     // Text for {{marksOnGun}}, {{v.marksOnGun}} macros.
+    // Текст для макросов {{marksOnGun}}, {{v.marksOnGun}}
     "marksOnGun": {
-      "_0": "<img src='xvm://res/xfticons/marks0.png' width='32' height='10'>",
-      "_1": "<img src='xvm://res/xfticons/marks1.png' width='32' height='10'>",
-      "_2": "<img src='xvm://res/xfticons/marks2.png' width='32' height='10'>",
-      "_3": "<img src='xvm://res/xfticons/marks3.png' width='32' height='10'>"
+      "_0": "0",
+      "_1": "1",
+      "_2": "2",
+      "_3": "3"
     },
     // Text for {{spotted}} macro.
+    // Текст для макроса {{spotted}}
     "spotted": {
-      "neverSeen": "<img src='xvm://res/xfticons/neverseen.png' width='23' height='23' vspace='0'>",
-      "lost": "<img src='xvm://res/xfticons/lost.png' width='23' height='23' vspace='0'>",
-      "revealed": "<img src='xvm://res/xfticons/revealed.png' width='23' height='23' vspace='0'>",
-      "dead": "",
-      "neverSeen_arty": "<img src='xvm://res/xfticons/neverseen.png' width='23' height='23' vspace='0'>",
-      "lost_arty": "<img src='xvm://res/xfticons/lost.png' width='23' height='23' vspace='0'>",
-      "revealed_arty": "<img src='xvm://res/xfticons/revealed.png' width='23' height='23' vspace='0'>",
-      "dead_arty": ""
+      "neverSeen": "",
+      "lost": "<font face='xvm' size='23'>&#x70;</font>",
+      "spotted": "<font face='xvm' size='23'>&#x70;</font>",
+      "dead": "<font face='xvm' size='23' alpha='#80'>&#x76;</font>",
+      "neverSeen_arty": "",
+      "lost_arty": "<font face='xvm' size='23'>&#x70;</font>",
+      "spotted_arty": "<font face='xvm' size='23'>&#x70;</font>",
+      "dead_arty": "<font face='xvm' size='23' alpha='#80'>&#x76;</font>"
     },
     // Text for {{xvm-user}} macro.
+    // Текст для макроса {{xvm-user}}
     "xvmuser": {
+      // XVM with enabled statistics / XVM со включенной статистикой.
       "on": "on",
+      // XVM with disabled statistics / XVM со выключенной статистикой.
       "off": "off",
+      // Without XVM / Без XVM.
       "none": "none"
     },
-    // Text for {{battletype}} macro.    
+    // Text for {{battletype}} macro.
+    // Текст для макроса {{battletype}}.
     "battletype": {
-      "unknown": "unknown",
-      "regular": "regular",
+      // Неизвестный бой.
+      "unknown": "",
+      // Случайный бой.
+      "regular": "",
+      // Тренировочный бой.
       "training": "training",
+      // Ротный бой.
       "company": "company",
+      // Турнир.
       "tournament": "tournament",
+      // Клановый бой.
       "clan": "clan",
-      "tutorial": "tutorial",
+      // Учебный бой.
+      "tutorial": "",
+      // Командный бой.
       "cybersport": "cybersport",
-      "historical": "historical",
-      "event_battles": "event_battles",
+      // Бой спецрежима (гонки, футбол и т.п.).
+      "event_battles": "",
+      // Вылазка.
       "sortie": "sortie",
+      // Бой за укрепрайон.
       "fort_battle": "fort_battle",
-      "rated_cybersport": "rated_cybersport"
+      // Командный бой: ладдер.
+      "rated_cybersport": "rated_cybersport",
+      // Глобальная карта (ГК)
+      "global_map": "global_map",
+      // Регулярный турнир (ивент) ГК
+      "tournament_regular": "tournament_regular",
+      // Периодический турнир (ивент) ГК
+      "tournament_clan": "tournament_clan",
+      // Песочный PVE, <10 боев
+      "rated_sandbox": "",
+      // Песочный PVE, >10 боев
+      "sandbox": "",
+      // Бой до последнего
+      "fallout_classic": "",
+      // ?
+      "fallout_multiteam": ""
     },
-    // Text for {{topclan}} macro.    
+    // Text for {{topclan}} macro.
+    // Текст для макроса {{topclan}}
     "topclan": {
       "top": "top",
       "persist": "persist",
@@ -60,4 +99,3 @@
     }
   }
 }
-
