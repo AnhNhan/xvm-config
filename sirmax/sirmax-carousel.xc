@@ -11,11 +11,16 @@
     //"zoom": 0.75,
     "rows": 2,
     "padding": { "horizontal": 5, "vertical": 5 },
+    //"scrollingSpeed": 30,
+    "backgroundAlpha": 30,
     "filtersPadding": { "horizontal": 11, "vertical": 10 },
     "alwaysShowFilters": true,
     //"suppressCarouselTooltips": true,
     //"hideBuyTank": true,
     //"hideBuySlot": true,
+    //"showUsedSlots": true,
+    "showTotalSlots": true,
+    "sorting_criteria": ["level", "nation", "type"],
     "filters": {
       //"nation":   { "enabled": false },
       //"type":     { "enabled": false },
@@ -34,7 +39,7 @@
       "statusText":     { "visible": true,  "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       "statusTextBuy":  { "visible": true,  "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       "clanLock":       { "visible": true,  "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
-      "activateButton": { "visible": true,  "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "activateButton": { "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       "__stub__": {}
     },
     "extraFields": [
@@ -72,7 +77,7 @@
 
         { "x": 0, "y": 51, "w": 22, "h": 22, "src": "img://gui/maps/icons/library/dossier/techRatio40x32.png" },
         { "x": 21, "y": 53,
-          "format": "<b><font face='mono' size='12' color='{{v.c_xte}}'>{{v.xte|--}}</font></b>",
+          "format": "<b><font face='mono' size='12' color='{{v.battles>9?{{v.c_xte|#666666}}|#666666}}'>{{v.xte|--}}</font></b>",
           "shadow": ${ "def.textFieldShadow" }
         },
 

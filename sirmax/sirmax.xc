@@ -1,23 +1,25 @@
 {
-  "configVersion": "5.1.0",
+  "configVersion": "6.1.0",
   "autoReloadConfig": true,
   //"language": "pl",
   "def": {
     "formatNick": "{{name%.20s~..}}<font alpha='#A0'>{{clan}}</font>",
-    "formatVehicle": "<font face='Consolas' size='11'><img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'><img src='xvm://res/icons/flags/{{flag|default}}.png' width='16' height='11'><font color='{{c:avglvl|#666666}}'>{{avglvl%d|-}}</font> <font color='{{t-battles>9?{{c:xte|#666666}}|#666666}}'>{{t-battles>9?{{xte|--}}|--}}</font>|<font color='{{c:xwgr|#666666}}'>{{xwgr|--}}</font>|<font color='{{c:xeff|#666666}}'>{{xeff|--}}</font>|<font color='{{c:xwn8|#666666}}'>{{xwn8|--}}</font> <font color='{{c:kb|#666666}}'>{{kb%2d~k|--k}}</font></font>",
+    "formatVehicle": "<font face='Consolas' size='11'><img src='xvm://res/icons/xvm/xvm-user-{{xvm-user}}.png'><img src='xvm://res/icons/flags/{{flag|default}}.png' width='16' height='11'><font color='{{c:avglvl|#666666}}'>{{avglvl%d|-}}</font> <font color='{{t-battles>19?{{c:xte|#666666}}|#666666}}'>{{xte|--}}</font>|<font color='{{c:xwgr|#666666}}'>{{xwgr|--}}</font>|<font color='{{c:xeff|#666666}}'>{{xeff|--}}</font>|<font color='{{c:xwn8|#666666}}'>{{xwn8|--}}</font> <font color='{{c:kb|#666666}}'>{{kb%2d~k|--k}}</font></font>",
     //"formatVehicle": "{{vehicle}}",
 
     "pingServers": {
       "enabled": true,
       //"y": 70,
+      "ignoredServers": ["RU4", "RU8", "RU9"],
       "showTitle": false,
       "updateInterval": 5000
     },
     "onlineServers": {
       "enabled": true,
-      //"x": -3,
-      //"y": 51,
-      //"hAlign": "center",
+      "x": 5,
+      "y": 80,
+      "hAlign": "left",
+      "ignoredServers": ["RU4", "RU8", "RU9"],
       //"topmost": true,
       "showTitle": false
     },
@@ -39,8 +41,9 @@
     //"skipIntro": false,
     "saveLastServer": true,
     "autologin": true,
-    "confirmOldReplays": true,
-    "pingServers": ${"def.pingServers"}
+    //"confirmOldReplays": true,
+    "pingServers": ${"def.pingServers"},
+    "onlineServers": ${"def.onlineServers"}
   },
   "hangar": {
     "enableGoldLocker": true,
@@ -76,7 +79,6 @@
     "sortColumn": 3,
     //"sortColumn": -9,
     //"showXTEColumn": false,
-    "showExtraDataInProfile": true,
     "defaultFilterValue": "+all -premium -master -arty"
   },
   "squad": {
@@ -94,7 +96,47 @@
     "allowMarksOnGunInPanelsAndMinimap": true,
     "clanIconsFolder": "clanicons",
     "sixthSenseIcon": "cfg://sirmax/img/SixthSense.png",
-    "elements": ${"elements"}
+    "elements": ${"elements"},
+    "minimapDeadSwitch": true,
+    "camera": {
+      "enabled": true,
+      "noScroll": true,
+      "arcade": {
+        "distRange": [2, 50],
+        "startDist": 30,
+        "scrollSensitivity": 2.5,
+        "dynamicCameraEnabled": false
+      },
+      "postmortem": {
+        "distRange": [2, 100],
+        "startDist": 30,
+        "scrollSensitivity": 2.5,
+        "dynamicCameraEnabled": false
+      },
+      "strategic": {
+        "distRange": [30, 250],
+        "dynamicCameraEnabled": false
+      },
+      "sniper": {
+        "zooms": [2, 4, 8, 16],
+        "dynamicCameraEnabled": false,
+        "zoomIndicator": {
+          //"x": -100,
+          //"y": 0,
+          //"width": 100,
+          //"height": 40,
+          //"alpha": 100,
+          //"align": "left",
+          //"valign": "center",
+          //"bgColor": null,
+          //"borderColor": "0xFFFF00",
+          //"shadow": { "distance": 0, "angle": 45, "color": "0x000000", "alpha": 80, "blur": 2, "strength": 4 },
+          //"format": "<font face='$FieldFont' size='20'>frags:{{my-frags}} x{{zoom}}</font>",
+          "enabled": true,
+          "__stub__": null
+        }
+      }
+    }
   },
   "fragCorrelation": {
     //"showAliveNotFrags": true
@@ -103,6 +145,7 @@
     //"enabled": false,
     //"allyColor": "0xFFFF00",
     //"enemyColor": "0x00FFFF",
+    //"ally": { "primaryTitleFormat":   "<font size='15' color='#FFFFFF'>{0} {{extra}}</font>" },
     "__stub__": null
   },
   "battleLoading": {
@@ -110,12 +153,18 @@
     //"removeSquadIcon": true,
     "removeVehicleLevel": true,
     "removeVehicleTypeIcon": true,
-    //"squadIconOffsetXLeft": -32,
-    //"squadIconOffsetXRight": -32,
-    //"nameFieldOffsetXLeft": -10,
-    //"nameFieldOffsetXRight": -10,
-    //"vehicleFieldOffsetXLeft": 8,
-    //"vehicleFieldOffsetXRight": 8,
+    //"nameFieldShowBorder": true,
+    //"vehicleFieldShowBorder": true,
+    //"squadIconOffsetXLeft": "{{xvm-stat?-32|0}}",
+    //"squadIconOffsetXRight": "{{xvm-stat?-32|0}}",
+    //"nameFieldOffsetXLeft": "{{xvm-stat?-32|0}}",
+    //"nameFieldWidthDeltaLeft": 10,
+    //"nameFieldOffsetXRight": "{{xvm-stat?-32|0}}",
+    //"nameFieldWidthDeltaRight": 10,
+    //"vehicleFieldOffsetXLeft": 10,
+    //"vehicleFieldWidthDeltaLeft": 10,
+    //"vehicleFieldOffsetXRight": 10,
+    //"vehicleFieldWidthDeltaRight": 10,
     //"vehicleIconOffsetXLeft": 4,
     //"vehicleIconOffsetXRight": 4,
     "clanIcon": { "show": true, "x": -345, "xr": -345, "y": 4, "h": 16, "w": 16, "alpha": 90 },
@@ -125,11 +174,33 @@
     "formatLeftVehicle":  ${"def.formatVehicle"},
     "formatRightVehicle": ${"def.formatVehicle"}
   },
+  "battleLoadingTips": {
+    "showBattleTier": true,
+    //"removeSquadIcon": true,
+    "removeVehicleLevel": true,
+    "removeVehicleTypeIcon": true,
+    //"nameFieldShowBorder": true,
+    //"vehicleFieldShowBorder": true,
+    "squadIconOffsetXLeft": -80,
+    "squadIconOffsetXRight": -80,
+    "nameFieldOffsetXLeft": -80,
+    "nameFieldWidthDeltaLeft": 40,
+    "nameFieldOffsetXRight": -80,
+    "nameFieldWidthDeltaRight": 40,
+    //"vehicleFieldOffsetXLeft": 10,
+    "vehicleFieldWidthDeltaLeft": 10,
+    //"vehicleFieldOffsetXRight": 10,
+    "vehicleFieldWidthDeltaRight": 10,
+    "clanIcon": { "show": true }
+  },
   "statisticForm": {
     "showBattleTier": true,
     //"removeSquadIcon": true,
     "removeVehicleLevel": true,
     "removeVehicleTypeIcon": true,
+    //"nameFieldShowBorder": true,
+    //"vehicleFieldShowBorder": true,
+    //"fragsFieldShowBorder": true,
     //"squadIconOffsetXLeft": -32,
     //"squadIconOffsetXRight": -32,
     //"nameFieldOffsetXLeft": -10,
@@ -181,11 +252,11 @@
       { "value": 9999, "alpha": 0 }
     ],
     "hp_ratio": [
-      { "value": 1, "alpha": "#00" },
-      { "value": 10, "alpha": "#FF" },
-      { "value": 20, "alpha": "#BB" },
-      { "value": 50, "alpha": "#00" },
-      { "value": 101, "alpha": "#00" }
+      { "value": 1, "alpha": "00" },
+      { "value": 10, "alpha": "100" },
+      { "value": 20, "alpha": "75" },
+      { "value": 50, "alpha": "00" },
+      { "value": 101, "alpha": "00" }
     ]
   },
   "iconset": {
@@ -208,7 +279,7 @@
   },
   "texts": {
     //"vtype": { "LT":  "ЛТ" },
-    "marksOnGun": { "_0": "-", "_1": "1", "_2": "2", "_3": "3" }
+    "marksOnGun": { "_0": "*", "_1": "1", "_2": "2", "_3": "3" }
   },
   "colors": {
     "system": {

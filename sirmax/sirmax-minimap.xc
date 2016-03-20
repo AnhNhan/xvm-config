@@ -4,16 +4,21 @@
     "iconScale": 1.2,
     "hideCameraTriangle": true,
     "cameraAlpha": 90,
-    "selfIconAlpha": 75,
+    //"selfIconAlpha": 70,
+    //"iconAlpha": 0,
     //"showCameraLineAfterDeath": false,
     "minimapAimIcon": "cfg://sirmax/img/MinimapAim.png",
     "minimapAimIconScale": 200,
-    "zoom": { "centered": false },
+    "zoom": { "pixelsBack": 150, "centered": true },
+    //"useStandardCircles": true,
+    //"useStandardLabels": true,
+    //"useStandardLines": true,
     "circles": {
         "view": [
             { "enabled": true, "state": 1, "distance": 50, "scale": 1, "thickness": 0.5, "alpha": 70, "color": "0xFFFFFF" },
             { "enabled": true, "state": 2, "distance": 50, "scale": 1, "thickness": 0.5, "alpha": 45, "color": "0xFFFFFF" },
-            { "enabled": true, "distance": 445, "scale": 1, "thickness": 0.5, "alpha": 45, "color": "0xFFFFFF" },
+            { "enabled": "{{my-vtype-key=SPG?false|true}}", "distance": 564, "scale": 1, "thickness": 0.5, "alpha": 40, "color": "0xFFFFFF" },
+            { "enabled": true, "distance": 445, "scale": 1, "thickness": 0.5, "alpha": 40, "color": "0xFFFFFF" },
             //{ "enabled": true, "distance": "blindarea", "scale": 0.9, "thickness": 1.5, "alpha": 80, "color": "0xFFFF00" },
             { "enabled": true, "state": 1, "distance": "dynamic", "scale": 1, "thickness": 1, "alpha": 80, "color": "0x3EB5F1" },
             { "enabled": true, "state": 2, "distance": "dynamic", "scale": 1, "thickness": 0.75, "alpha": 80, "color": "0x3EB5F1" },
@@ -40,25 +45,13 @@
         { "enabled": true, "from": 50,  "to": 1463,  "inmeters": true, "thickness": 0.5,   "alpha": 65, "color": "0xFFFFFF"}
       ]
     },
-    "labels": {
-      "units": {
-        "format": {
-          "ally":       "<textformat leading='-15'><span class='mm_a'>{{vehicle-short}}\n<font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span></textformat>",
-          "teamkiller": "<textformat leading='-15'><span class='mm_t'>{{vehicle-short}}\n<font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span></textformat>",
-          "enemy":      "<textformat leading='-15'><span class='mm_e'>{{vehicle-short}}\n<font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span></textformat>"
-        },
-        "alpha" : {
-          //"deadenemy": 50
-        }
-      }
-    },
-    "square" : { "enabled": true }
+    "labels": ${"sirmax-minimapLabels.xc":"labels"}
   },
   "minimapAlt": {
     "$ref": { "path": "minimap" },
-    "enabled": true,
+    "enabled": false,
     "mapBackgroundImageAlpha": 50,
-    "selfIconAlpha": 50,
+    //"selfIconAlpha": 50,
     "hideCameraTriangle": false,
     "cameraAlpha": 100,
     "iconScale": 2,
@@ -78,24 +71,7 @@
        { "enabled": true, "from": 50,  "to": 1463,  "inmeters": true, "thickness": 0.5,   "alpha": 65, "color": "0xFFFFFF"}
       ]
     },
-    "labels": {
-      "units": {
-        "format": {
-          "ally":           "<span class='mm_a'><font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span>",
-          "squad":          "<span class='mm_s'><font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span>",
-          "teamkiller":     "<span class='mm_t'><font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span>",
-          "enemy":          "<span class='mm_e'><font color='{{c:xwn8}}' alpha='{{alive?#FF|#80}}'>{{marksOnGun|*}}</font></span>",
-          "lostally":       "<span class='mm_la'>{{vehicle-class}}</span>",
-          "lost":           "<span class='mm_l'>{{vehicle-class}}</span>",
-          "deadally":       "<span class='mm_dot'>{{vehicle-class}}</span><span class='mm_da'><i>{{nick%.5s}}</i></span>",
-          "deadteamkiller": "<span class='mm_dot'>{{vehicle-class}}</span><span class='mm_dt'><i>{{nick%.5s}}</i></span>",
-          "deadenemy":      "<span class='mm_dot'>{{vehicle-class}}</span><span class='mm_de'><i>{{nick%.5s}}</i></span>",
-          "deadsquad":      "<span class='mm_dot'>{{vehicle-class}}</span><span class='mm_ds'><i>{{nick%.5s}}</i></span>"
-        }
-      },
-      "mapSize": { "enabled": false }
-    },
-    //"square" : { "enabled": false },
+    //"mapSize": { "enabled": false },
     "__stub__": null
   }
 }
